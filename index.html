@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tai Chung Restaurant</title>
+    <meta name="description" content="Authentic Chinese cuisine at Tai Chung Restaurant. Explore our menu featuring chow mein, chop suey, spring rolls, and more!">
+    <meta name="keywords" content="Chinese restaurant, chow mein, chop suey, spring rolls, [Your City/Town]">
+    <!-- Social Media Meta Tags (add your handles/URLs) -->
+    <meta property="og:title" content="Tai Chung Restaurant">
+    <meta property="og:description" content="Authentic Chinese cuisine ...">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tai Chung Restaurant">
+    <!-- ... other social media meta tags ... -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+   
+    
+
+
+</head>
+<body>
+ 
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo-link">  <!-- Wrap logo in a link if needed -->
+        <img src="img/1.png" alt="Tai Chung Logo" class="logo">
+      </a>
+      <ul class="nav-list"> <ul> 
+      <li class="active"><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-bars"></i>Our Menu</a>
+      <div class="sub-menu">
+        <ul>
+          <li><a href="#">Order Now</a></li>
+          <li><a href="#">Special Orders</a></li>
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">My Account</a></li>
+          </li>
+
+
+
+        </ul>
+        
+
+
+      </div>
+      </li>
+      <li><a href="#">Family Feast</a></li>
+      <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">About us</a></li>
+  
+      <div class="social-bar">
+        <a href="https://www.facebook.com/share/1BCB6amT6M/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/public-profile/settings" class="social-icon"><i class="fab fa-linkedin "></i></a>
+        <a href="https://www.instagram.com/tai213690?igsh=YzljYTk1ODg3Zg==" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ChungTai35858?t=M5K80HKeUmZJHeRZDU9NWQ&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@tai.chung64?_t=ZM-8stRWGtqriw&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@taichung-i7c?si=V9AW1zLIyGMmSZA6" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://pin.it/5OmZNAm2I" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <!-- More social icons -->
+          </div>
+        </nav>
+        </header>
+        <div class="welcome-container">
+          <div class="welcome-slider">
+              <img class="welcome-slide active" src="img/guulu.png.png" alt="Cho Mein">
+              <img class="welcome-slide" src="img/werenga.png" alt="Sweet 'n' Sour Chicken">
+              <div class="welcome-overlay">
+                  <h1>Welcome to Tai Chung Restaurant</h1>
+                  <p>Experience the taste of authentic Chinese cuisine.</p>
+              </div>
+          </div>
+      </div>  
+
+      <div class="featured-dishes">
+        <h1>Our Featured Dishes</h1>
+        <div class="dishes-container">
+            <div class="dish">
+                <img src="img/guulu.png.png" alt="Cho Mein Beef">
+                <h3>Cho Mein Beef</h3>
+                <p>Crispy chicken in a tangy sweet and sour sauce.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="img/153A4840.png" alt="Beef Chow Mein">
+                <h3>Chop Suey</h3>
+                <p>A classic stir-fry of tender meat with a colorful medley of crisp vegetables.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="img/werenga.png" alt="Sweet & Sour">
+                <h3>Sweet & Sour</h3>
+                <p>Crispy spring rolls with fresh vegetables.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="img/hhhh.png" alt="Spring Rolls">
+                <h3>Spring Rolls</h3>
+                <p>Crispy spring rolls with fresh vegetables.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="dish">
+              <img src="img/s921345261197427717_p28_i1_w572.webp" alt="Chow Faan">
+              <h3>Chow Faan</h3>
+              <p>A  classic! Tender Meal, fluffy rice, crisp vegetables, and savory seasonings wok-tossed to perfection. A satisfying and flavorful meal.</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+           <div class="dish">
+                <img src="img/pexels-pixabay-357756.png" alt="Sushi">
+                <h3>Sushi</h3>
+                <p>Coming Soon</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>    
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+        </ul>
+        <p id="cart-total">Total: R0.00</p>
+    </div>
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+          <h2>Stay Updated</h2>
+          <p>Subscribe to our newsletter for exclusive deals, new menu items, and culinary inspiration!</p>
+          <form id="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+              <button type="submit">Subscribe</button>
+          </form>
+          <div id="newsletter-message"></div>
+      </div>
+      </section>
+  </section>
+
+    <div id="map"></div>
+  <footer>
+    <div class="footer-content">
+    <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>A brief description of your restaurant.</p>
+    </div>
+    <div class="footer-section contact">
+        <h2>Contact</h2>
+        <p>13 Belgravia Road, Athlone</p>
+        <p>Phone: +27 (021) 696 4870</p>
+        <p>Email: tai213690@gmail.com</p>
+    </div>
+    <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Family Feast</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </div>
+    
+    <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+      
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+  <div class="footer-section newsletter">
+    <h2>Stay Updated</h2>
+    <p>Sign up for our newsletter to receive exclusive offers, new menu items, and more!</p>
+    <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <div id="newsletter-message"></div>
+</div>
+<div class="footer-section developers">
+    <h2>Developed By</h2>
+    <ul>
+        <li><a href="https://github.com/Khozasteven" target="_blank">SecureWave IT Consultants</a></li>
+        </ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2024 Tai Chung Restaurant. All rights reserved.</p>
+</div>
+</div>
+</footer>
+      </footer>
+
+      
+   
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>   
+</body>
+</html>

@@ -1,0 +1,593 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Or your preferred font */
+    line-height: 1.6;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;           /* Add some padding to the navbar */
+    background-color: black;   /* Your existing background color */
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    justify-content: flex-start;
+    z-index: 1000;
+    }
+    
+    
+    .logo-link { /* Prevents extra space around the logo image*/
+        display: block;
+    }
+    
+    
+    .logo {
+        width: 150px;  /* Set a fixed width for the logo or adjust as needed*/
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between logo and nav links */
+    }
+
+    /* The rest of your existing styles (hover effects, etc.) */
+.navbar ul{
+display: inline-flex;
+list-style-type: none;
+color: #fff;
+}
+
+.navbar ul li{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    width: 120px;
+    margin: auto;
+    padding: auto;
+}
+
+.navbar ul li a{
+    color: #fff;
+    text-decoration:none ;
+
+}
+
+.active, .navbar ul li:hover {
+background-color:#ff0077;
+
+border-radius: 3px;
+
+}
+
+
+.sub-menu {
+    display: none;
+    position: absolute;
+      
+}
+
+.navbar ul li:Hover .sub-menu{
+    display: block;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.navbar ul li:Hover .sub-menu ul{
+    display:block;
+    margin: 10px;
+    padding:10px;
+}
+
+.navbar ul li:Hover .sub-menu ul li{
+width:150px;
+padding: 10px;
+border-bottom:1px dotted #fff;
+border-radius: 0;
+text-align:left;
+}
+
+.navbar ul li:Hover .sub-menu ul li:last-child{
+    border-bottom: none;
+}
+
+.navbar ul li:Hover .sub-menu ul li a:Hover{
+color: #b2ffb2;
+}
+
+.social-bar {
+    position: fixed; /* or sticky  if you want it to stick within a scrolling parent*/
+    top: 5%;        /* Adjust vertical position as needed */
+    left: 400px;      /* Adjust horizontal position */
+    transform: translateY(-40%); /* Vertically center */
+    display: flex;
+    flex-direction: row; /* Stack icons vertically */
+    gap: 10px; /* Space between icons */
+    background-color: #000000; /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-icon { /* Style the individual icons/links */
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gold;  /* Or a color of your choice */
+              /* Icon color */
+}
+
+.social-icon .fa-facebook-f {
+    color: #0040ff; /* Facebook blue */
+}
+
+.social-icon .fa-twitter {
+    color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icon .fa-instagram { /* Example - adjust class name as needed */
+    color: #ff0077; /* Instagram pink/orange gradient (simplified) */
+}
+
+/* Add more rules for other social icons */
+.social-icon .fa-youtube {
+    color: #FF0000; /* YouTube Red */
+}
+
+
+.social-icon .fa-linkedin-in {
+    color: #0692dd; /* LinkedIn blue */
+}
+
+.social-icon .fa-pinterest{
+    color:red; /* LinkedIn blue */
+}
+
+.social-icon .fa-tiktok{
+    color: #000; 
+}
+
+
+/* ...and so on for other icons */
+
+.social-icon i.fab {
+    font-size: 20px;  /* Keep your existing font-size rule */
+}
+
+/* Welcome Slider */
+.welcome-container {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.welcome-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: kenburns 12s linear infinite; /* Ken Burns effect */
+}
+
+.welcome-slide:nth-child(2n) {
+    animation-direction: alternate-reverse; /* Reverse direction for every other image */
+}
+
+@keyframes kenburns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.2) translate(-10%, 10%); }
+}
+
+.welcome-slide.active {
+    opacity: 1;
+}
+
+/* Welcome Overlay */
+.welcome-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1; /* Ensure overlay is on top */
+}
+.welcome-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px;
+    background-image: linear-gradient(to right, #f2d700, white); /* Gold to white gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInOut 20s infinite; /* Combined fade in/out animation */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% { /* Fade in over 2 seconds */
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40% { /* Hold for 6 seconds */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    #map {
+    top: -2px;
+    margin: 0;
+    padding: 0;
+    height: 600px;  /* Adjust as needed */
+    width: 100%;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+
+}
+
+.leaflet-control-zoom { /* Style the zoom control */
+    background-color: #f0f0f0; /* Example */
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: #fff; /* Example: White background */
+    border-radius: 5px;    /* Example: Rounded corners */
+ }
+
+
+.leaflet-popup-content {
+    font-family: 'Poppins', sans-serif; /* Match your site's font */
+    font-size: 14px;
+ }
+
+
+.leaflet-popup-tip {
+    background-color: #000000; /* Example: Blue tip */
+ }
+
+ .leaflet-popup-content-wrapper {
+    background-color: #000000; /* Example: White background */
+    border-radius: 5px;    /* Example: Rounded corners */
+ }
+
+
+.leaflet-popup-content {
+    font-family: 'Poppins', sans-serif; /* Match your site's font */
+    font-size: 14px;
+ }
+
+
+.leaflet-popup-tip {
+    background-color: #000000; /* Example: Blue tip */
+ }
+
+
+/* Featured Dishes Section *//* ... other CSS ... */
+/* ... other CSS ... */
+.featured-dishes {
+    padding: 40px;
+    text-align: center;
+    background-color: gold; /* Background color of the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.683);
+    margin-bottom: 40px;
+}
+
+.featured-dishes h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px; /* Reduced margin */
+    color: #fff; /* Gold color for the heading */
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+    border-bottom: 2px solid #333; /* Darker, thinner border */
+    padding-bottom: 10px; /* Add some padding below the border */
+    display: inline-block; /* Make border only as wide as the text */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; /* Center horizontally */
+    align-items: start; /* Align to the top */
+}
+
+.dish {
+    border: 15px solid #000000;
+    padding: 10px;
+    text-align: center;
+    width: auto; /* Important: Allow dish to adapt to grid */
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    background-color: gold;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    height: 100%; /* Make dish fill grid cell height */
+}
+
+.dish img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* or contain */
+    max-height: 200px;
+}
+
+.dish p {
+    margin-bottom: 15px;
+    color: white; /* Changed to white */
+    flex-grow: 1;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added text shadow for better readability */
+    font-size: 1em; /* Adjust as needed */
+    line-height: 1.4; /* Improves readability */
+    font-family: 'Arial', sans-serif; /* or another suitable font */
+    text-align: left; /* Align text to the left */
+    padding: 0 10px; /* Add some left and right padding */
+}
+
+/* Add to cart styles */
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+/* Cart Styles */
+#cart {
+    position: relative;
+    top: -25px;
+    margin: 20px auto; /* Center the cart */
+    padding: 20px;
+    width: 100%; /* Adjust as needed */
+    height: 300px;
+    background-color: gold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+#cart p {
+    background-color: gold;
+}
+
+#cart h2 {
+    margin-bottom: 10px;
+}
+
+#cart-items {
+    list-style-type: none; /* Remove bullet points from list */
+    padding-left: 0;
+}
+
+#cart-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Add a separator between items */
+}
+
+#cart-items li:last-child {
+    border-bottom: none; /* Remove separator on the last item */
+}
+
+#cart-total {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-bar, .footer-section .social-icons { /* Apply to both header and footer */
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center the icons */
+}
+
+.social-icon {
+    color: #555;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    display: inline-flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    border-radius: 50%; /* Make them circular */
+    border: 1px solid transparent; /* Transparent border for hover effect */
+}
+
+.social-icon:hover {
+    color: #007bff;
+    border-color: #007bff; /* Add a border on hover */
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: left; /* Align text to the left within sections */
+}
+
+.footer-section {
+    flex: 1 1 250px; /* Distribute space evenly, min-width 250px */
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #555; /* Add a separator line */
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555; /* Add a top border */
+    padding-top: 10px;
+}
+
+  /* Newsletter Section */
+.newsletter-section {
+    background-image: url("img/1.png"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0; /* Adjust padding as needed */
+    text-align: center;
+    color: white; /* Text color on the background */
+    position: relative; /* For overlay */
+    overflow: hidden; /* Hide overflowing particles */
+}
+
+
+
+.newsletter-section::before { /* Dark Overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 0; /* Place overlay behind content */
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Bring content above overlay */
+    z-index: 1;
+}
+
+.newsletter-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Use a nice font */
+    color:#f2d700;
+}
+
+.newsletter-container p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+#newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+#newsletter-email {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#newsletter-form button {
+    background-color: #f2d700;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#newsletter-form button:hover {
+    background-color: #d4af37;
+}
+
+#newsletter-message {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #008000;
+}
+
+#newsletter-message.error {
+    color: #FF0000;
+}

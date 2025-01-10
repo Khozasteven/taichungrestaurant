@@ -1,0 +1,68 @@
+AIzaSyBcl_sGlY4zIkA9Z2W5V3BxJliUs13oBGs.{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   }
+   
+   body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   color: #333;
+   background-image: url('img/Springrolls.jpg.jpg');
+   background-size: cover;
+   background-position: center;
+   }
+   
+   /* Navigation Menu */
+   
+   .nav {
+   background-color: #333;
+   color: #fff;
+   padding: 1em;
+   text-align: center;
+   }
+   
+   .nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: space-between;
+   }
+   
+   .nav li {
+   margin-right: 20px;
+   }
+   
+   .nav a {
+   color: #fff;
+   text-decoration: none;
+   }
+   
+   .nav .auth {
+   margin-left: 20px;
+   }
+   
+   .nav .signin, .nav .signup {
+   background-color: #333;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   }
+   
+   .nav .signin:hover, .nav .signup:hover {
+   background-color: #444;
+   }
+   
+   /* Hero Section */
+   
+   .hero {
+   background-image: url('hero-background.jpg');
+   background-size: cover;
+   background-position: center;
+   }
+   
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcl_sGlY4zIkA9Z2W5V3BxJliUs13oBGs=initMap" async defer></script>
+  </head>
